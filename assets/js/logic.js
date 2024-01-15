@@ -79,7 +79,7 @@ function questionClick() {
     feedback.style.fontSize = "400%";
   } else {
     feedback.textContent = "Correct!";
-    feedback.style.color = "green";
+    feedback.style.color = "darkgreen";
     feedback.style.fontSize = "400%";
   }
 
