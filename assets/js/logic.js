@@ -48,7 +48,7 @@ function getQuestions() {
 
   // loop over choices
   currentQuestion.choices.forEach(function (choice, i) {
-    // create new button for each choice
+    // create new button 
     var choiceNode = document.createElement("button");
     choiceNode.setAttribute("class", "choice");
     choiceNode.setAttribute("value", choice);
@@ -100,6 +100,7 @@ function questionClick() {
   }
 }
 
+// quiz end function
 function quizEnd() {
 
   clearInterval(timerId);
@@ -116,6 +117,7 @@ function quizEnd() {
   questionEle.setAttribute("class", "hide");
 }
 
+//Tiem function
 function clockTick() {
   // update time
   time--;
@@ -132,7 +134,7 @@ function saveHighscore() {
   var initials = initials.value.trim();
 
   if (initials !== "") {
-    // get saved scores from localstorage, or if not any, set to empty array
+
     var highscores =
       JSON.parse(window.localStorage.getItem("highscores")) || [];
 
@@ -152,7 +154,7 @@ function saveHighscore() {
 }
 
 function checkForEnter(event) {
-  // "13" represents the enter key
+  // enter key
   if (event.key === "Enter") {
     saveHighscore();
   }
