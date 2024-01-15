@@ -9,10 +9,10 @@ function printHighScores() {
     return x.score - y.score;
   });
 
-  highscores.forEach(function (score) {
-    // create li tag for each high score
+  highscores.forEach(function (highscores) {
+    // create link tag for each high score
     var linkTag = document.createElement("li");
-    linkTag.textContent = score.initials + " - " + score.score;
+    linkTag.textContent = highscores.initials + " - " + highscores.score;
 
     // display on page
     var olElement = document.getElementById("highscores");
@@ -25,7 +25,7 @@ function clearHighScores() {
   window.location.reload();
 }
 
-document.getElementById("clear").onclick = clearHighscores;
+document.getElementById("clear").onclick = clearHighScores;
 
 // run function for highscore
 printHighScores();

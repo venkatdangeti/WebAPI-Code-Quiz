@@ -1,18 +1,18 @@
 
+// quiz variables
+var currentQuestionIndex = 0;
+var time = questions.length * 20;
+var timerId;
+
 // DOM elements
 var questionEle = document.querySelector("#questions");
 var timerEle = document.querySelector("#time");
 var choicesEle = document.querySelector("#choices");
 var submitBtn = document.querySelector("#submit");
 var startBtn = document.querySelector("#start");
-var initials = document.querySelector("#initials");
+var initialsEle = document.querySelector("#initials");
 var feedback = document.querySelector("#feedback");
 
-
-// quiz variables
-var currentQuestionIndex = 0;
-var time = questions.length * 20;
-var timerId;
 
 function startQuiz() {
 
@@ -131,7 +131,7 @@ function clockTick() {
 
 function saveHighscore() {
   // get value of input box
-  var initials = initials.value.trim();
+  var initials = initialsEle.value.trim();
 
   if (initials !== "") {
 
@@ -149,7 +149,7 @@ function saveHighscore() {
     window.localStorage.setItem("highscores", JSON.stringify(highscores));
 
     // redirect to next page
-    window.location.href = "score.html";
+    window.location.href = "highscores.html";
   }
 }
 
@@ -164,7 +164,7 @@ function checkForEnter(event) {
 // start quiz
 startBtn.onclick = startQuiz;
 
-initials.onkeyup = checkForEnter;
+initialsEle.onkeyup = checkForEnter;
 
 // submit initials
 submitBtn.onclick = saveHighscore;
