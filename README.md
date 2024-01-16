@@ -36,8 +36,19 @@ Final code should print the functionality.
 
 ## Final Screens
 
-Main Page : ![Alt text](assets/images/Quiz_Homepage.png)
+Home Page : ![Alt text](assets/images/Quiz_Homepage.png)
 
-Result Console : ![Alt text](images/FinancialAnalysis2.png)
+Questions Page : ![Alt text](assets/images/Quiz_Questionspage.png)
 
-Complete page with console result: ![Alt text](images/FinancialAnalysis3.png)
+Correct answer Page : ![Alt text](assets/images/Quiz_Correctpage.png)
+
+Wrong answer Page : ![Alt text](assets/images/Quiz_Wrongpage.png)
+
+Initial details Page : ![Alt text](assets/images/Quiz_Initialpage.png)
+
+Highscores Page : ![Alt text](assets/images/Quiz_Highscorespage.png)
+
+Clear highscores Page : ![Alt text](assets/images/Quiz_Clearscorepage.png)
+
+
+
