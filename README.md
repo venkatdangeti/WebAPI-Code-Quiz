@@ -1,4 +1,4 @@
-# Module 6 Challenge Web APIs: Code Quiz
+# Web APIs: Code Quiz
 
 
 ## Task
