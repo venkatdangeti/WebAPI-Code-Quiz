@@ -43,7 +43,6 @@ function getQuestions() {
   var titleEle = document.getElementById("question-title");
   titleEle.textContent = currentQuestion.title;
 
-  // clear out any old question choices
   choicesEle.innerHTML = "";
 
   // loop over choices
@@ -54,7 +53,6 @@ function getQuestions() {
     choiceNode.setAttribute("value", choice);
 
     choiceNode.textContent = i + 1 + ". " + choice;
-
 
     choiceNode.onclick = questionClick;
 
@@ -77,10 +75,16 @@ function questionClick() {
     feedback.textContent = "Wrong!";
     feedback.style.color = "red";
     feedback.style.fontSize = "400%";
+
+    //play sound when wrong answer
+    document.getElementById("wrong-sound").play();
   } else {
     feedback.textContent = "Correct!";
     feedback.style.color = "darkgreen";
     feedback.style.fontSize = "400%";
+
+    //play sound when correct answer
+    document.getElementById("correct-sound").play();
   }
 
   // right/wrong feedback
@@ -106,8 +110,8 @@ function quizEnd() {
   clearInterval(timerId);
 
   // show end screen
-  var endScreenEl = document.getElementById("end-screen");
-  endScreenEl.removeAttribute("class");
+  var endScreenEle = document.getElementById("end-screen");
+  endScreenEle.removeAttribute("class");
 
   // show final score
   var finalScoreEle = document.getElementById("final-score");
@@ -117,7 +121,7 @@ function quizEnd() {
   questionEle.setAttribute("class", "hide");
 }
 
-//Tiem function
+//Time function
 function clockTick() {
   // update time
   time--;
@@ -153,8 +157,8 @@ function saveHighscore() {
   }
 }
 
+// enter key function
 function checkForEnter(event) {
-  // enter key
   if (event.key === "Enter") {
     saveHighscore();
   }
