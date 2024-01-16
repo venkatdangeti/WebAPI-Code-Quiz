@@ -30,3 +30,14 @@ Create a code quiz that contains the following requirements:
 
   * When the game ends, it should display their score and give the user the ability to save their initials and their score
 
+
+Final code should print the functionality.
+
+
+## Final Screens
+
+Main Page : ![Alt text](assets/images/Quiz_Homepage.png)
+
+Result Console : ![Alt text](images/FinancialAnalysis2.png)
+
+Complete page with console result: ![Alt text](images/FinancialAnalysis3.png)

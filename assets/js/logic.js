@@ -70,21 +70,25 @@ function questionClick() {
     if (time < 0) {
       time = 0;
     }
+    //play sound when wrong answer
+    document.getElementById("wrong-sound").play();
+
     // display new time on page
     timerEle.textContent = time;
     feedback.textContent = "Wrong!";
     feedback.style.color = "red";
     feedback.style.fontSize = "400%";
 
-    //play sound when wrong answer
-    document.getElementById("wrong-sound").play();
+
   } else {
+
+    //play sound when correct answer
+    document.getElementById("correct-sound").play();
+
     feedback.textContent = "Correct!";
     feedback.style.color = "darkgreen";
     feedback.style.fontSize = "400%";
 
-    //play sound when correct answer
-    document.getElementById("correct-sound").play();
   }
 
   // right/wrong feedback
