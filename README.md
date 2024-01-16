@@ -52,3 +52,9 @@ Clear highscores Page : ![Alt text](assets/images/Quiz_Clearscorepage.png)
 
 
 
+## Git Hub page - https://github.com/venkatdangeti/WebAPI-Code-Quiz.git
+
+## deployed site page - https://venkatdangeti.github.io/WebAPI-Code-Quiz/
+
+
+
